@@ -99,9 +99,15 @@ export class PetCard extends Component {
 	render() {
 		let pet = this.props.pet;
 		let displayedName = pet.adopted;
+		// let img = document.createElement('img');
+		// img.setAttribute('className', 'card-img-top');
+		// img.setAttribute('src', pet.img);
+		// img.setAttribute('alt', pet.name);
+
 		// console.log(pet.img);
 		return (
 			<div className="card" onClick={this.handleClick}>
+				{/* {img.innerHTML} */}
 				<img className="card-img-top" src={pet.img} alt={pet.name} />
 				<div className="card-body">
 					<h3 className="card-title">{pet.name} {displayedName ? '(Adopted)':''}</h3>
