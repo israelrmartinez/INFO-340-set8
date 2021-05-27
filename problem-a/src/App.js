@@ -11,7 +11,6 @@ const EXAMPLE_SENATORS = [
 /* Your code goes here */
 // (1)
 export class App extends Component {
-	
 	render() {
 		return (<div className="container">
 					<h1>US Senators (Oct 2020)</h1>
@@ -24,7 +23,6 @@ export class App extends Component {
 
 // (3)
 export class SenatorTable extends Component {
-	
 	render() {
 		let arr = EXAMPLE_SENATORS.map( (senatorObj) => {
 			return <SenatorRow key={senatorObj.id} senator={senatorObj}/>
@@ -32,7 +30,7 @@ export class SenatorTable extends Component {
 		return (<table className="table table-bordered">
 			<TableHeader columnNames={HEADERS} />
 			<tbody>
-				{arr};
+				{arr}
 			</tbody>
 		</table>);
 	}
